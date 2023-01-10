@@ -1,0 +1,15 @@
+//- Подключаем шаблон
+extends ../layout/layout.pug
+
+//- Подключаем блоки, не забываем, как важны отступы в PUG
+block variables
+  -
+    const lang = "ru";
+    const siteTitle = "Главная";
+
+block content
+  div.content Здесь контент
+
+block scripts
+  <script src="./js/script.js"></script>
+

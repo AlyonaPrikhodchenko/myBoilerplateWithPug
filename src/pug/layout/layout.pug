@@ -1,0 +1,20 @@
+//- Подключаем блок переменных в самом верху, что-бы все файлы видели
+block variables
+
+//- Создаем шаблон для всех страниц сайта
+doctype html
+html(lang=lang)
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{siteTitle}
+  body
+    .wrapper
+    //- Подключаем модуль шапки сайта
+    include ../modules/header
+    //- Добавляем блок основной информации на страницы
+    block content
+    //- Подключаем блок футера
+    include ../modules/footer
+    //- Подключаем блок со скриптами
+    block scripts
